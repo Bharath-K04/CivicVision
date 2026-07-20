@@ -1,0 +1,34 @@
+{
+    "Hyderabad": {
+      "portal": "GHMC",
+      "registration": "api",
+      "departments": {
+        "Sanitation": "/mock-complaint",
+        "Water Supply": "/mock-complaint",
+        "Street Light": "/mock-complaint",
+        "Road Maintenance": "/mock-complaint"
+      }
+    },
+    "Bengaluru": {
+      "portal": "BBMP",
+      "registration": "api",
+      "departments": {
+        "Sanitation": "/mock-complaint",
+        "Water Supply": "/mock-complaint",
+        "Street Light": "/mock-complaint",
+        "Road Maintenance": "/mock-complaint"
+      }
+    },
+    "Chennai": {
+      "portal": "Chennai Corporation",
+      "registration": "email",
+      "email": "grievances@chennaicorporation.gov.in",
+      "departments": {
+        "Sanitation": null,
+        "Water Supply": null,
+        "Street Light": null,
+        "Road Maintenance": null
+      }
+    }
+  }
+  

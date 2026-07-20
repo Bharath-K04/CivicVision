@@ -1,0 +1,22 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Complaint {
+  id          Int      @id @default(autoincrement())
+  city        String
+  department  String
+  description String
+  location    String
+  complaintId String   @unique
+  chatHistory Json     @default("[]")
+  createdAt   DateTime @default(now())
+}
+
