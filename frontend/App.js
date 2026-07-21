@@ -27,7 +27,8 @@ export default function App() {
         return;
       }
       let loc = await Location.getCurrentPositionAsync({});
-      const apiKey = "69bee51382aee513251299rnd4ddad1";
+      // Pulls the key securely from your .env file
+      const apiKey = process.env.EXPO_PUBLIC_GEOCODE_API_KEY; 
       const response = await fetch(`https://geocode.maps.co/reverse?lat=${loc.coords.latitude}&lon=${loc.coords.longitude}&api_key=${apiKey}`);
       const data = await response.json();
       let completeAddress = '';

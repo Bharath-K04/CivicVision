@@ -21,7 +21,7 @@ app.use('/', mockComplaintApi);
 const upload = multer({ storage: multer.memoryStorage() });
 
 // Initialize Google Gemini
-const genAI = new GoogleGenerativeAI("AIzaSyBfbG3EYKdr0ZT-REpB8fc2x4SGSc_q7js");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // We use the flash model as it is fast and handles both text and images natively
 const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 const prisma = new PrismaClient();
